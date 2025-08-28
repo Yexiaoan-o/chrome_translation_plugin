@@ -1,0 +1,142 @@
+#translate-selection-btn {
+    position: absolute;
+    z-index: 9999;
+    background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 6px rgba(66, 133, 244, 0.3) !important;
+    transition: all 0.2s ease !important;
+    transform: translateY(0) !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    line-height: normal !important;
+    display: block;
+    min-width: auto !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+}
+
+#translate-selection-btn:hover {
+    background-color: #3367d6 !important;
+}
+
+#translation-result-panel {
+    position: absolute !important;
+    z-index: 9999 !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+    padding: 16px !important;
+    max-width: 320px !important;
+    font-size: 14px !important;
+    color: #333 !important;
+    margin: 0 !important;
+    line-height: 1.6 !important;
+    border: 1px solid rgba(0,0,0,0.08) !important;
+    min-height: auto !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform-origin: top left !important;
+    animation: panelFadeIn 0.2s ease-out !important;
+}
+
+#translation-result-panel #original-text {
+    margin-bottom: 12px !important;
+    padding: 10px !important;
+    background-color: #f8f9fa !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    word-break: break-word !important;
+    color: #202124 !important;
+    font-size: 14px !important;
+}
+
+#translation-result-panel #translated-text {
+    word-break: break-word !important;
+    padding: 8px 0 !important;
+    color: #3c4043 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+#translation-result-panel span {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    cursor: pointer !important;
+    font-size: 18px !important;
+    color: #9aa0a6 !important;
+    line-height: 1 !important;
+    padding: 4px !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease !important;
+    width: 24px !important;
+    height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#translation-result-panel span:hover {
+    background-color: #f1f3f4 !important;
+    color: #3c4043 !important;
+}
+
+#copy-translation-btn {
+    margin-top: 12px !important;
+    padding: 6px 12px !important;
+    background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(66, 133, 244, 0.2) !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+#copy-translation-btn:hover {
+    background: linear-gradient(135deg, #3367d6 0%, #2855b8 100%) !important;
+    box-shadow: 0 4px 8px rgba(66, 133, 244, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+#copy-translation-btn:active {
+    transform: translateY(1px) !important;
+}
+
+@keyframes panelFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Custom scrollbar */
+#translation-result-panel::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+#translation-result-panel::-webkit-scrollbar-track {
+    background: #f1f3f4 !important;
+    border-radius: 10px !important;
+}
+
+#translation-result-panel::-webkit-scrollbar-thumb {
+    background: #dadce0 !important;
+    border-radius: 10px !important;
+}
+
+#translation-result-panel::-webkit-scrollbar-thumb:hover {
+    background: #b0b3b8 !important;
+}

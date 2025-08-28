@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>划词翻译助手 - 设置</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .setting-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        .status-message {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #e6f4ea;
+            color: #137333;
+            display: block;
+        }
+        .error {
+            background-color: #fce8e6;
+            color: #c5221f;
+            display: block;
+        }
+        .hint {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="setting-group">
+        <label for="apiKey">OpenAI API 密钥</label>
+        <input type="text" id="apiKey" placeholder="sk-...">
+        <div class="hint">获取 API 密钥: <a href="https://console.volcengine.com/ark/region:ark+cn-beijing/endpoint/detail?Id=ep-m-20250711203520-pg55f&Tab=overview&Type=preset" target="_blank">火山账户页面</a></div>
+    </div>
+
+    <div class="setting-group">
+        <label for="apiUrl">API 地址</label>
+        <input type="text" id="apiUrl" placeholder="https://api.openai.com/v1/chat/completions">
+        <div class="hint">AI 翻译接口的 API 地址</div>
+    </div>
+
+    <div class="setting-group">
+        <label for="modelName">模型名称</label>
+        <input type="text" id="modelName" placeholder="gpt-3.5-turbo">
+        <div class="hint">翻译使用的 AI 模型名称</div>
+    </div>
+
+    <div class="setting-group">
+        <label for="customPrompt">自定义翻译提示词</label>
+        <textarea id="customPrompt" placeholder="请将以下中文翻译成英文，保持原意准确，语言流畅自然。"></textarea>
+        <div class="hint">提示词将作为系统消息发送给 AI 模型，指导翻译风格和要求</div>
+    </div>
+
+    <button id="saveSettings">保存设置</button>
+    <div id="statusMessage" class="status-message"></div>
+
+    <script src="options.js"></script>
+</body>
+</html>
