@@ -1,7 +1,4 @@
 
-// const DEFAULT_PROMPT = '请将以下中文翻译成英文，保持原意准确，语言流畅自然。';
-// const DEFAULT_API_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
-// const DEFAULT_MODEL_NAME = 'doubao-seed-1-6-250615';
 
 
 // 监听来自content.js的翻译请求

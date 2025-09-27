@@ -207,13 +207,6 @@ async function startTranslation() {
 
 // 监听文本选择事件
 document.addEventListener('mouseup', function(e) {
-    // 忽略输入框内的选择
-    const activeElement = document.activeElement;
-    if (activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(activeElement.tagName)) {
-        hideTranslateButton();
-        return;
-    }
-
     const selection = window.getSelection();
     const selectedText = selection.toString().trim();
 
